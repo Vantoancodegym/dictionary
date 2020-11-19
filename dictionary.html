@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<input id="dic" type="text">
+<button type="button" onclick="findA()">Check</button>
+<script>
+    function findA(){
+        let dic = document.getElementById("dic").value;
+        let flag = true;
+    let array = [
+        ["hello","xin chao"],
+        ["goodbye","tam biet"],
+        ["like","thich"],
+        ["help","giup do"],
+        ["no","khong"],
+        ["yes","co"],
+        ["white","trang"],
+        ["red","do"],
+        ["black","den"],
+    ]
+    for (let i=0; i<array.length;i++){
+        for (let j =0;j<array[i].length;j++){
+            if (array[i][0] == dic){
+                alert(array[i][1]);
+                flag = true;
+                break;
+            }else if (array[i][1]==dic){
+                alert(array[i][0]);
+                flag = true;
+                break;
+            }else {
+                flag = false;
+
+            }
+        }
+        if (flag==true){
+            break;
+        }
+    }
+    if (flag==false){
+        alert("tu nay k co nghia");
+    }
+    }
+</script>
+</body>
+</html>
